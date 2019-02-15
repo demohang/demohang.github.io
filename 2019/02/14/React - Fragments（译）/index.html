@@ -11,8 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="React - Fragments（译）react中的一个常见模式是组件返回多个元素。片段可以让您分组子列表，而无需向DOM添加额外的节点。
-123456789render() &amp;#123;  re,"> 
+    <meta name="description" content="react中的一个常见模式是组件返回多个元素。片段可以让您分组子列表，而无需向DOM添加额外的节点。
+123456789render() &amp;#123;  return (    &amp;lt;React.,"> 
     <meta name="author" content="Pilotage"> 
     <link rel="alternative" href="atom.xml" title="Pilotage" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -53,7 +53,7 @@
 
         </div>
         <div class="content markdown">
-            <h1 id="React-Fragments（译）"><a href="#React-Fragments（译）" class="headerlink" title="React - Fragments（译）"></a><strong>React - Fragments（译）</strong></h1><p>react中的一个常见模式是组件返回多个元素。片段可以让您分组子列表，而无需向DOM添加额外的节点。</p>
+            <p>react中的一个常见模式是组件返回多个元素。片段可以让您分组子列表，而无需向DOM添加额外的节点。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;React.Fragment&gt;</span><br><span class="line">      &lt;ChildA /&gt;</span><br><span class="line">      &lt;ChildB /&gt;</span><br><span class="line">      &lt;ChildC /&gt;</span><br><span class="line">    &lt;<span class="regexp">/React.Fragment&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>还有一种新的语法法来声明它们，但它还没有得到所有流行工具的支持。</p>
 <hr>
