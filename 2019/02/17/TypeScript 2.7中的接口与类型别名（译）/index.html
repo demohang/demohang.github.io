@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pilotage</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="原网址
+人们经常问我（在线，在工作，在公园滑板（不😂）），使用类型和接口在TypeScript中定义编译时类型之间的区别是什么。
+我以前做的第一件事，将它们指向TypeScript手册……
+不幸的,"> 
+    <meta name="author" content="Pilotage"> 
+    <link rel="alternative" href="atom.xml" title="Pilotage" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+</html>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">TypeScript 2.7中的接口与类型别名（译）</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">TypeScript 2.7中的接口与类型别名（译）</h1>
+        <div class="stuff">
+            <span>二月 17, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/API/">API</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/React/">React</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/译/">译</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p><a href="https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c" target="_blank" rel="noopener">原网址</a></p>
+<p>人们经常问我（在线，在工作，在公园滑板（不😂）），使用类型和接口在TypeScript中定义编译时类型之间的区别是什么。</p>
+<p>我以前做的第一件事，将它们指向TypeScript手册……</p>
+<p>不幸的是大多数时候，他们没有找到他们要找的（它隐藏在“高级类型”部分中）。即使他们找到了，这里描述的信息已经过时（描述的行为适用于<a href="mailto:typescript@2.0.x" target="_blank" rel="noopener">typescript@2.0.x</a>）。</p>
+<p>大家好消息！你不必再看了，这篇文章是关于何时使用interface vs type别名的最新描述/样式指南。</p>
+<h3 id="官方文件说："><a href="#官方文件说：" class="headerlink" title="官方文件说："></a>官方文件说：</h3><blockquote>
+<p><em>“类型别名可以起到类似接口的作用，但是，存在一些微妙的差异。”</em></p>
+</blockquote>
+<p><strong>那是对的！</strong></p>
+<p><strong><em>有什么区别？</em></strong></p>
+<blockquote>
+<p><em>1、“一个不同之处在于，接口创建了一个随处可见的新名称。<br>类型别名不会创建新名称 - 例如，错误消息将不使用别名。“</em></p>
+</blockquote>
+<p><strong>那不对！ （自TypeScript 2.1起）</strong></p>
+<p>让我们定义 <code>Point</code> 通过接口定义编译时类型以及 <code>getRectangleSquare</code> 函数的两个实现，它将使用参数类型的接口和类型别名。</p>
+<p><img src="../images/0_Ql6cSmhwupaPn7Ub.png" alt="用接口和类型文字定义的Point" title="用接口和类型文字定义的Point"></p>
+<p>用接口和类型文字定义的 <code>Point</code></p>
+<p><img src="../images/0_hvarXPxaDpoXWe_n.png" alt="getRectangleArea函数使用接口和类型别名" title="getRectangleArea函数使用接口和类型别名"></p>
+<p><code>getRectangleArea</code> 函数使用接口和类型别名</p>
+<p><img src="../images/0_ZjdAejKVlALo7PmC.gif" alt="类型别名和接口的错误引用相同" title="类型别名和接口的错误引用相同"></p>
+<p>类型别名和接口的错误引用相同</p>
+<p>所以两者的错误都是一样的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// TS Error: </span></span><br><span class="line"><span class="comment">// Interface:</span></span><br><span class="line">Argument <span class="keyword">of</span> type <span class="string">'&#123; x: number; &#125;'</span> is not assignable to parameter <span class="keyword">of</span> type <span class="string">'PointInterface'</span>. </span><br><span class="line">类型<span class="string">'&#123;x：number; &#125;'</span>不能赋值给<span class="string">'PointInterface'</span>类型的参数。</span><br><span class="line">Property <span class="string">'y'</span> is missing <span class="keyword">in</span> type <span class="string">'&#123; x: number; &#125;'</span>.</span><br><span class="line">类型<span class="string">'&#123;x：number;中缺少属性'</span>y<span class="string">';&#125;”。</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2、<em>“第二个更重要的区别是类型别名无法扩展或实现”</em></p>
+</blockquote>
+<p><strong>再说一次，这是不正确的！</strong></p>
+<p>我们可以使用类型别名扩展接口：</p>
+<p><img src="../images/0_Ob_oxjG7dfN9sCBH.png" alt="使用类型别名扩展的接口" title="使用类型别名扩展的接口"></p>
+<p>或者使用类型别名来实现Class约束</p>
+<p><img src="../images/0_Yx6SXZrPILT4_gZu.png" alt="class实现类型别名" title="class实现类型别名"></p>
+<p>或者使用由类型扩展的接口来实现Class约束</p>
+<p><img src="../images/0_TcJzYs6DA1MRG8eN.png" alt="ThreeDimension扩展了PointType。 PointType是一种类型别名" title="ThreeDimension扩展了PointType。 PointType是一种类型别名"></p>
+<p>ThreeDimension扩展了PointType。 PointType是一种类型别名</p>
+<p>我们还可以结合使用类型别名和接口来实现Class约束</p>
+<p><img src="../images/0_NR7Sulf-FHR0t7mL.png" alt="class实现接口和类型别名" title="class实现接口和类型别名"></p>
+<p>class实现接口和类型别名</p>
+<blockquote>
+<p>3、<em>“类型别名不能扩展/实现其他类型”</em></p>
+</blockquote>
+<p><strong>再说一次，这是不正确的！</strong></p>
+<p>您可以使用接口或任何其他TypeScript有效类型（具有Dictionary / JS对象的形状，因此非基本类型等…）通过交叉运算符 <code>＆</code> 用于类型别名扩展。</p>
+<p><img src="../images/0_IBhNBUAwBdVP4n6z.png" alt="class实现使用intersection创建的类型别名" title="class实现使用intersection创建的类型别名"></p>
+<p>class实现使用intersection创建的类型别名</p>
+<p>我们还可以利用映射类型进行接口和类型别名的各种转换。</p>
+<p>让我们通过 <code>部分</code> 映射类型选择Shape和Perimeter：</p>
+<p><img src="../images/0_PwXJsDDc7rfded7O.png" alt="类实现用交集和映射类型创建的类型别名。perimeter()和area()是可选的，因此我们不必在我们的类中实现它们。" title="类实现用交集和映射类型创建的类型别名。perimeter()和area()是可选的，因此我们不必在我们的类中实现它们。"></p>
+<p>类实现用交集和映射类型创建的类型别名。perimeter()和area()是可选的，因此我们不必在我们的类中实现它们。</p>
+<p>弱类型检测也正常工作：</p>
+<p><img src="../images/0_9YupZKHqno0SD5VI.gif" alt="弱类型检测按预期工作" title="弱类型检测按预期工作"></p>
+<p>弱类型检测按预期工作。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
