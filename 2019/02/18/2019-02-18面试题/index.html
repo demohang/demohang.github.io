@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pilotage</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="1、使用至少两种方法，实现如下布局（box垂直居中于父元素，宽高不固定）？第一种：123456789101112131415&amp;lt;style&amp;gt;.container &amp;#123;  displ,"> 
+    <meta name="author" content="Pilotage"> 
+    <link rel="alternative" href="atom.xml" title="Pilotage" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+</html>
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">2019-02-18面试题</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">2019-02-18面试题</h1>
+        <div class="stuff">
+            <span>二月 18, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/面试/">面试</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h3 id="1、使用至少两种方法，实现如下布局（box垂直居中于父元素，宽高不固定）？"><a href="#1、使用至少两种方法，实现如下布局（box垂直居中于父元素，宽高不固定）？" class="headerlink" title="1、使用至少两种方法，实现如下布局（box垂直居中于父元素，宽高不固定）？"></a>1、使用至少两种方法，实现如下布局（box垂直居中于父元素，宽高不固定）？</h3><p>第一种：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">  display: table;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.inner</span> &#123;</span></span><br><span class="line"><span class="undefined">  display: table-cell;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">vertical-align</span><span class="selector-pseudo">:middle</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">text-align</span><span class="selector-pseudo">:center</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">  you own content</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>第二种：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">  position: relative;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.inner</span> &#123;</span></span><br><span class="line"><span class="undefined">  position: absolute;</span></span><br><span class="line"><span class="undefined">  top: 50%;</span></span><br><span class="line"><span class="undefined">  left: 50%;</span></span><br><span class="line"><span class="undefined">  transform: translate(-50%, -50%);</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">    your own content</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>第三种：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span>&#123;</span></span><br><span class="line"><span class="undefined">    text-align: center;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span><span class="selector-pseudo">:before</span> &#123;</span></span><br><span class="line"><span class="undefined">    content: '';</span></span><br><span class="line"><span class="undefined">    display: inline-block;</span></span><br><span class="line"><span class="undefined">    height: 100%;</span></span><br><span class="line"><span class="undefined">    vertical-align: middle;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.inner</span> &#123;</span></span><br><span class="line"><span class="undefined">    display: inline-block;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner"</span>&gt;</span></span><br><span class="line">        this is a box fixed in center of screen<span class="tag">&lt;<span class="name">br</span>&gt;</span>The second line</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="2、px、em、rem有什么区别？"><a href="#2、px、em、rem有什么区别？" class="headerlink" title="2、px、em、rem有什么区别？"></a>2、px、em、rem有什么区别？</h3><ul>
+<li><code>px</code> 表示“绝对尺寸”（并非真正的绝对），实际上就是css中定义的像素（此像素与设备的物理像素有一定的区别，后续详细说明见文末说明1），利用 <code>px</code> 设置字体大小及元素宽高等比较稳定和精确。</li>
+<li>em表示相对尺寸，其相对于当前对象内文本的  <code>font-size</code>（如果当前对象内文本的 <code>font-size</code> 计量单位也是em，则当前对象内文本的 <code>font-size</code> 的参考对象为父元素文本 <code>font-size</code>）。</li>
+<li><code>rem</code> 也表示相对尺寸，其参考对象为根元素<code>&lt;html&gt;</code> 的 <code>font-size</code>，因此只需要确定这一个 <code>font-size</code>。</li>
+</ul>
+<h3 id="3、position有几种取值，每种取值相对于谁来进行定位？"><a href="#3、position有几种取值，每种取值相对于谁来进行定位？" class="headerlink" title="3、position有几种取值，每种取值相对于谁来进行定位？"></a>3、position有几种取值，每种取值相对于谁来进行定位？</h3><ul>
+<li>absolute :生成绝对定位的元素， 相对于最近一级的 定位不是 static 的父元素来进行定位。</li>
+<li>fixed （老IE不支持）生成绝对定位的元素，通常相对于浏览器窗口或 frame 进行定位。</li>
+<li>relative 生成相对定位的元素，相对于其在普通流中的位置进行定位。</li>
+<li>static 默认值。没有定位，元素出现在正常的流中</li>
+<li>sticky 生成粘性定位的元素，容器的位置根据正常文档流计算得出</li>
+</ul>
+<h3 id="4、JavaScript的数据类型有哪些？"><a href="#4、JavaScript的数据类型有哪些？" class="headerlink" title="4、JavaScript的数据类型有哪些？"></a>4、JavaScript的数据类型有哪些？</h3><ul>
+<li>六种基本数据类型：<code>Undefined</code>、<code>Null</code>、<code>Boolean</code>、<code>Number</code>、<code>String</code>、<code>Symbol</code></li>
+<li>引用类型：<code>Object</code>、<code>Array</code> 和 <code>Function</code></li>
+</ul>
+<h3 id="5、用new运算符创建一个实例时，经历了哪些步骤？"><a href="#5、用new运算符创建一个实例时，经历了哪些步骤？" class="headerlink" title="5、用new运算符创建一个实例时，经历了哪些步骤？"></a>5、用new运算符创建一个实例时，经历了哪些步骤？</h3><p>例子🌰：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CreatPerson</span>(<span class="params">name,age,job</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.job = job;</span><br><span class="line">    <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">"Nicholas"</span>,<span class="number">18</span>,<span class="string">"Software Engineer"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">"Greg"</span>,<span class="number">27</span>,<span class="string">"Doctor"</span>);</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>创建一个新对象</li>
+<li>将构造函数的作用域赋给新对象（因此this就指向了这个新对象）</li>
+<li>执行构造函数中的代码（为这个新对象添加属性）</li>
+<li>返回新对象</li>
+</ol>
+<h3 id="6、下面这段代码额返回值是什么？"><a href="#6、下面这段代码额返回值是什么？" class="headerlink" title="6、下面这段代码额返回值是什么？"></a>6、下面这段代码额返回值是什么？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scope = <span class="string">'global scope'</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkScope</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> scope = <span class="string">'local scope'</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> scope;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f;</span><br><span class="line">&#125;</span><br><span class="line">checkScope()(); <span class="comment">// local scope</span></span><br></pre></td></tr></table></figure>
+<h3 id="7、用什么方法可以获得对象的类？写出代码"><a href="#7、用什么方法可以获得对象的类？写出代码" class="headerlink" title="7、用什么方法可以获得对象的类？写出代码"></a>7、用什么方法可以获得对象的类？写出代码</h3><ol>
+<li>Object.prototype.toString.call(对象)</li>
+<li>typeof: typeof 对象 或者 typeof(对象)</li>
+</ol>
+<h3 id="8、call-、apply-、bind-方法的作用是什么？什么时候会使用到这些方法？他们之间的区别是什么？"><a href="#8、call-、apply-、bind-方法的作用是什么？什么时候会使用到这些方法？他们之间的区别是什么？" class="headerlink" title="8、call()、apply()、bind()方法的作用是什么？什么时候会使用到这些方法？他们之间的区别是什么？"></a>8、call()、apply()、bind()方法的作用是什么？什么时候会使用到这些方法？他们之间的区别是什么？</h3><p>javaScript权威指南上的解释是： call() 、apply()可以看作是某个对象的方法，通过调用方法的形式来间接调用函数。bind() 就是将某个函数绑定到某个对象上。</p>
+<p>关于call() 和 apply() 在犀牛书上的解释可能比较生涩难懂，我的理解就是，它们的作用是： 让函数在某个指定的对象下执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">x</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="keyword">this</span>.x)&#125;</span><br><span class="line"></span><br><span class="line">foo.call(obj) <span class="comment">// 打印结果：1</span></span><br></pre></td></tr></table></figure>
+<p>call() 和apply()的第一个参数相同，就是指定的对象。这个对象就是该函数的执行上下文。</p>
+<p><strong>call()和apply()的区别就在于，两者之间的参数。</strong></p>
+<p>call()在第一个参数之后的  后续所有参数就是传入该函数的值。apply() 只有两个参数，第一个是对象，第二个是数组，这个数组就是该函数的参数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a, b, c</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(b);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">foo.call(obj, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) <span class="comment">// 打印结果：2;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a, b, c</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(b);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">foo.apply(obj, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// 打印结果：2;</span></span><br></pre></td></tr></table></figure>
+<p>bind() 方法和前两者不同在于： bind() 方法会返回执行上下文被改变的函数而不会立即执行，而前两者是直接执行该函数。他的参数和call()相同。</p>
+<p><strong>这三个方法的作用都是改变函数的执行上下文！</strong></p>
+<h3 id="9、利用正则表达式，写一个字符串转换成驼峰的方法。"><a href="#9、利用正则表达式，写一个字符串转换成驼峰的方法。" class="headerlink" title="9、利用正则表达式，写一个字符串转换成驼峰的方法。"></a>9、利用正则表达式，写一个字符串转换成驼峰的方法。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stringToCamelCase</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> reg=<span class="regexp">/-(\w)/g</span>; <span class="comment">//子项()表示子项</span></span><br><span class="line">    <span class="keyword">return</span> str.replace(reg,<span class="function"><span class="keyword">function</span>(<span class="params">$<span class="number">0</span>, $<span class="number">1</span></span>)</span>&#123; </span><br><span class="line">        <span class="comment">// $0代表正则整体，replace（）方法中的第二个参数若是回调函数，那么这个回调函数中的参数就是匹配成功后的结果</span></span><br><span class="line">        <span class="comment">// 若回调函数中有多个参数时，第一个参数代表整个正则匹配结果，第二个参数代表第一个子项</span></span><br><span class="line">        alert($<span class="number">0</span>); <span class="comment">// -b</span></span><br><span class="line">        alert($<span class="number">1</span>); <span class="comment">// b</span></span><br><span class="line">        <span class="keyword">return</span> $<span class="number">1.</span>toUpperCase();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10、如下代码，控制台会输出什么内容？"><a href="#10、如下代码，控制台会输出什么内容？" class="headerlink" title="10、如下代码，控制台会输出什么内容？"></a>10、如下代码，控制台会输出什么内容？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> promise1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        resolve(<span class="string">'success'</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> promise2 = promise1.then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'error~~~'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'promise1'</span>, promise1);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'promise2'</span>, promise2);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'promise1'</span>, promise1);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'promise2'</span>, promise2);</span><br><span class="line">&#125;, <span class="number">2000</span>);</span><br></pre></td></tr></table></figure>
+<p>promise1 Promise {<pending>}<br>promise2 Promise {<pending>}<br>promise1 Promise {<resolved>: “success”}<br>Promise {<rejected>: Error: error~~~at promise1.then (<anonymous>:8:11)}</anonymous></rejected></resolved></pending></pending></p>
+<h3 id="11、CommonJS、AMD、CMD的区别？"><a href="#11、CommonJS、AMD、CMD的区别？" class="headerlink" title="11、CommonJS、AMD、CMD的区别？"></a>11、CommonJS、AMD、CMD的区别？</h3><p><strong>CommonJS</strong></p>
+<p><code>CommonJS</code> 是以在浏览器环境之外构建 <code>JavaScript</code> 生态系统为目标而产生的项目，比如在服务器和桌面环境中，<code>Node.JS</code>遵循<code>CommonJS</code>的规范<br><code>CommonJS</code> 规范是为了解决 <code>JavaScript</code> 的作用域问题而定义的模块形式，可以使每个模块它自身的命名空间中执行。该规范的主要内容是，模块必须通过 <code>module.exports</code> 导出对外的变量或接口，通过 <code>require()</code> 来导入其他模块的输出到当前模块作用域中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clock = <span class="built_in">require</span>(<span class="string">'clock'</span>);</span><br><span class="line">clock.start();</span><br></pre></td></tr></table></figure>
+<p><code>CommonJS</code> 是同步加载模块</p>
+<p><strong>AMD</strong></p>
+<p>基于<code>CommonJS</code>规范的<code>nodeJS</code>出来以后，服务端的模块概念已经形成，很自然地，大家就想要客户端模块。而且最好两者能够兼容，一个模块不用修改，在服务器和浏览器都可以运行。但是，由于一个重大的局限，使得<code>CommonJS</code>规范不适用于浏览器环境。如果将上面的代码运行在客户端浏览器，就会报错。</p>
+<p>上面的<code>require</code>方法是同步的。这对服务器端不是一个问题，因为所有的模块都存放在本地硬盘，可以同步加载完成，等待时间就是硬盘的读取时间。但是，对于浏览器，这却是一个大问题，因为模块都放在服务器端，等待时间取决于网速的快慢，可能要等很长时间，浏览器处于”假死”状态。</p>
+<p>因此，浏览器端的模块，不能采用”同步加载”，只能采用”异步加载”。这就是AMD规范诞生的背景。</p>
+<p><code>CommonJS</code>是主要为了<code>JS</code>在后端的表现制定的，他是不适合前端的，<code>AMD</code>出现了，它就主要为前端JS的表现制定规范。</p>
+<p><code>AMD</code>是<code>Asynchronous Module Definition</code>的缩写，意思就是”异步模块定义”。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。<br><code>AMD</code>也采用<code>require()</code>语句加载模块，但是不同于<code>CommonJS</code>，它要求两个参数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="built_in">module</span>], callback);</span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">'clock'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">clock</span>)</span>&#123;</span><br><span class="line">  clock.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>requireJs</code>就是<code>AMD</code>规范的实现</p>
+<p><strong>CMD</strong></p>
+<p><code>CMD</code> (Common Module Definition), 是<code>seajs</code>推崇的规范，CMD则是依赖就近，用的时候再<code>require</code>。它写起来是这样的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> clock = <span class="built_in">require</span>(<span class="string">'clock'</span>);</span><br><span class="line">   clock.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>AMD</code>和<code>CMD</code>最大的区别是对依赖模块的执行时机处理不同，而不是加载的时机或者方式不同，二者皆为异步加载模块。</p>
+<p><code>AMD</code>依赖前置，js可以方便知道依赖模块是谁，立即加载；而<code>CMD</code>就近依赖，需要使用把模块变为字符串解析一遍才知道依赖了那些模块</p>
+<h3 id="12、MVC、MVP、MVVM的区别？"><a href="#12、MVC、MVP、MVVM的区别？" class="headerlink" title="12、MVC、MVP、MVVM的区别？"></a>12、MVC、MVP、MVVM的区别？</h3><p>MVC：</p>
+<ol>
+<li>View接受用户的交互请求</li>
+<li>View将请求转交给Controller</li>
+<li>Controller操作Model进行数据更新</li>
+<li>数据更新之后，Model通知View数据变化</li>
+<li>View显示更新之后的数据</li>
+</ol>
+<p>MVP：</p>
+<ol>
+<li>各部分之间的通信， 都是双向的。</li>
+<li>View 与 Model 不发生联系， 都通过 Presenter 传递。</li>
+<li>View 非常薄， 不部署任何业务逻辑， 称为 被动视图，Presenter 非常厚， 所有逻辑都部署在那里。</li>
+</ol>
+<p>MVVM：</p>
+<ol>
+<li>各部分之间的通信， 都是双向的。</li>
+<li>View 与 Model 不发生联系， 都通过 ViewModel 传递。</li>
+<li>View 非常薄， 不部署任何业务逻辑， 称为 ViewModel 非常厚， 所有逻辑都部署在那里。</li>
+</ol>
+<p>唯一的区别是， 它采用双向数据绑定，(data-binding) ： View 的变动。自动反映在 ViewModel, 反之亦然。 Angular 和 Ember 都采用这种模式</p>
+<h3 id="13、简述v-if和v-show的区别？"><a href="#13、简述v-if和v-show的区别？" class="headerlink" title="13、简述v-if和v-show的区别？"></a>13、简述v-if和v-show的区别？</h3><p>v-if 是销毁删除节点<br>v-show是显示隐藏节点</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
