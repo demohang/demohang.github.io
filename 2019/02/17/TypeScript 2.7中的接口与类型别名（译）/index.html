@@ -72,8 +72,14 @@
 <p><strong>那不对！ （自TypeScript 2.1起）</strong></p>
 <p>让我们定义 <code>Point</code> 通过接口定义编译时类型以及 <code>getRectangleSquare</code> 函数的两个实现，它将使用参数类型的接口和类型别名。</p>
 <p><img src="/images/TypeScript/0_Ql6cSmhwupaPn7Ub.png" alt="用接口和类型文字定义的Point" title="用接口和类型文字定义的Point"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">用接口和类型文字定义的Point</font></p>
+
 <p><img src="/images/TypeScript/0_hvarXPxaDpoXWe_n.png" alt="getRectangleArea函数使用接口和类型别名" title="getRectangleArea函数使用接口和类型别名"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">getRectangleArea函数使用接口和类型别名</font></p>
+
 <p><img src="/images/TypeScript/0_ZjdAejKVlALo7PmC.gif" alt="类型别名和接口的错误引用相同" title="类型别名和接口的错误引用相同"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">类型别名和接口的错误引用相同</font></p>
+
 <p>所以两者的错误都是一样的：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// TS Error: </span></span><br><span class="line"><span class="comment">// Interface:</span></span><br><span class="line">Argument <span class="keyword">of</span> type <span class="string">'&#123; x: number; &#125;'</span> is not assignable to parameter <span class="keyword">of</span> type <span class="string">'PointInterface'</span>. </span><br><span class="line">类型<span class="string">'&#123;x：number; &#125;'</span>不能赋值给<span class="string">'PointInterface'</span>类型的参数。</span><br><span class="line">Property <span class="string">'y'</span> is missing <span class="keyword">in</span> type <span class="string">'&#123; x: number; &#125;'</span>.</span><br><span class="line">类型<span class="string">'&#123;x：number;中缺少属性'</span>y<span class="string">';&#125;”。</span></span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -82,21 +88,35 @@
 <p><strong>再说一次，这是不正确的！</strong></p>
 <p>我们可以使用类型别名扩展接口：</p>
 <p><img src="/images/TypeScript/0_Ob_oxjG7dfN9sCBH.png" alt="使用类型别名扩展的接口" title="使用类型别名扩展的接口"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">使用类型别名扩展的接口</font></p>
+
 <p><img src="/images/TypeScript/0_Yx6SXZrPILT4_gZu.png" alt="class实现类型别名" title="class实现类型别名"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">class实现类型别名</font></p>
+
 <p><img src="/images/TypeScript/0_TcJzYs6DA1MRG8eN.png" alt="ThreeDimension扩展了PointType。 PointType是一种类型别名" title="ThreeDimension扩展了PointType。 PointType是一种类型别名"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">ThreeDimension扩展了PointType。 PointType是一种类型别名</font></p>
+
 <p>我们还可以结合使用类型别名和接口来实现Class约束</p>
 <p><img src="/images/TypeScript/0_NR7Sulf-FHR0t7mL.png" alt="class实现接口和类型别名" title="class实现接口和类型别名"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">class实现接口和类型别名</font></p>
+
 <blockquote>
 <p>3、<em>“类型别名不能扩展/实现其他类型”</em></p>
 </blockquote>
 <p><strong>再说一次，这是不正确的！</strong></p>
 <p>您可以使用接口或任何其他TypeScript有效类型（具有Dictionary / JS对象的形状，因此非基本类型等…）通过交叉运算符 <code>＆</code> 用于类型别名扩展。</p>
 <p><img src="/images/TypeScript/0_IBhNBUAwBdVP4n6z.png" alt="class实现使用intersection创建的类型别名" title="class实现使用intersection创建的类型别名"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">class实现使用intersection创建的类型别名</font></p>
+
 <p>我们还可以利用映射类型进行接口和类型别名的各种转换。</p>
 <p>让我们通过 <code>部分</code> 映射类型选择Shape和Perimeter：</p>
 <p><img src="/images/TypeScript/0_PwXJsDDc7rfded7O.png" alt="类实现用交集和映射类型创建的类型别名。perimeter()和area()是可选的，因此我们不必在我们的类中实现它们。" title="类实现用交集和映射类型创建的类型别名。perimeter()和area()是可选的，因此我们不必在我们的类中实现它们。"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">类实现用交集和映射类型创建的类型别名。perimeter()和area()是可选的，因此我们不必在我们的类中实现它们。</font></p>
+
 <p>弱类型检测也正常工作：</p>
 <p><img src="/images/TypeScript/0_9YupZKHqno0SD5VI.gif" alt="弱类型检测按预期工作" title="弱类型检测按预期工作"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">弱类型检测按预期工作</font></p>
+
 <p>###同时具有类型别名和接口的混合类型</p>
 <p>有时，您可能希望定义一个同时充当函数和对象的对象，以及附加的属性。</p>
 <p>我们在这里讨论的是为一个函数（可调用对象）定义一个类型以及该函数的静态属性。</p>
@@ -104,8 +124,12 @@
 <p>当与第三方JavaScript交互时，也可以看到这种模式，以充分描述类型的形状。</p>
 </blockquote>
 <p><img src="/images/TypeScript/0_NG9ZykTgiohMQjAz.png" alt="混合类型定义和实现" title="混合类型定义和实现"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">混合类型定义和实现</font></p>
+
 <p>它同样适用于类型别名！</p>
 <p><img src="/images/TypeScript/0_fZ7POY2RBUCgmpsf.png" alt="通过类型别名混合类型" title="通过类型别名混合类型"></p>
+<p align="center"><font face="微软雅黑" color="gray" size="1">通过类型别名混合类型</font></p>
+
 <p>但是有一个非常微妙的区别。您将在IDE中获得特定的形状类型，而不是对 <code>Counter</code> 类型的引用。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
